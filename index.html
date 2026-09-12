@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEP Expression Analyzer — Validate GeneXproTools models</title>
+<meta name="description" content="A free desktop tool for validating and exploring Gene Expression Programming (GEP) regression models exported from GeneXproTools. Built for engineering students.">
+
+<link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <img src="assets/logo.png" alt="">
+      <strong>GEP Expression Analyzer</strong>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#tutorial">Video tutorial</a>
+      <a href="https://github.com/">GitHub</a>
+    </div>
+    <a href="#download" class="btn btn-primary btn-sm">Download</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Check your GEP model before you trust it.</h1>
+      <p class="lede">
+        Paste the equation GeneXproTools gives you, point it at your dataset,
+        and get R², RMSE, MAE, a validation chart, and a full parametric
+        study — plus a live-formula Excel report you can hand in or hand off.
+      </p>
+      <div class="hero-ctas">
+        <a href="#download" class="btn btn-primary">Download for Windows</a>
+        <a href="#how-it-works" class="btn btn-outline">See how it works</a>
+      </div>
+      <div class="hero-meta">
+        Free &amp; open source <span class="dot">&middot;</span> No sign-up <span class="dot">&middot;</span> Built for engineering coursework
+      </div>
+    </div>
+    <div class="hero-shot">
+      <img src="assets/screenshots/shot_2_results.png" alt="GEP Expression Analyzer showing an experimental vs predicted validation chart with R², RMSE and MAE">
+    </div>
+  </div>
+</header>
+
+<div class="credit-strip">
+  Developed by <strong>Eng. Ghassan Ajouri</strong> &nbsp;·&nbsp; Supervised by <strong>Prof. Yasmine Murad</strong>
+</div>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" class="section-pad">
+  <div class="container">
+    <div class="section-head center">
+      <h2>Everything a GEP model needs checking against</h2>
+      <p class="eyebrow-free-caption" style="margin:0 auto;">
+        One workflow, from raw spreadsheet to a report you can submit.
+      </p>
+    </div>
+
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 8l5-5 5 5"/><path d="M5 21h14a2 2 0 0 0 2-2v-4"/><path d="M3 15v4a2 2 0 0 0 2 2"/></svg>
+        </div>
+        <h3>Load any dataset</h3>
+        <p>Point it at your Excel file. Input columns and the experimental target are detected automatically — override either from a dropdown.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4L4 12l4 8"/><path d="M16 4l4 8-4 8"/></svg>
+        </div>
+        <h3>Paste your equation</h3>
+        <p>Drop in the Python function GeneXproTools exports. It runs safely, sandboxed, with no file or system access.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="1.6"/><circle cx="11" cy="10" r="1.6"/><circle cx="16" cy="13" r="1.6"/><circle cx="20" cy="6" r="1.6"/><path d="M4 20h17"/></svg>
+        </div>
+        <h3>Instant validation</h3>
+        <p>Experimental vs predicted chart, trendline, and R² / RMSE / MAE / MAPE — the R² on the chart always matches the number in the panel.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2" fill="currentColor" stroke="none"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2" fill="currentColor" stroke="none"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="11" cy="18" r="2" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h3>Parametric study</h3>
+        <p>Every input swept from min to max while the rest hold at their mean — view all parameters at once, or drill into one at a time.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="10" y1="10" x2="10" y2="20"/></svg>
+        </div>
+        <h3>Live-formula export</h3>
+        <p>The Excel report writes real formulas, not static numbers — open it and every cell still recalculates, including the parametric sheets.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg>
+        </div>
+        <h3>Safe by design</h3>
+        <p>Equations run in a restricted sandbox — no imports beyond math, no filesystem or network access, ever.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCREENSHOTS ============ -->
+<section id="screenshots" class="section-pad bg-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>A tab for every step</h2>
+      <p class="eyebrow-free-caption">From loading data to exporting the report, without leaving the app.</p>
+    </div>
+
+    <div class="gallery-tabs">
+      <button class="gallery-tab active"
+        data-src="assets/screenshots/shot_1_data.png"
+        data-caption="Load your Excel file and paste the GEP equation. Inputs and the experimental column are detected automatically.">
+        Data &amp; Equation
+      </button>
+      <button class="gallery-tab"
+        data-src="assets/screenshots/shot_2_results.png"
+        data-caption="Experimental vs predicted chart plus R², RMSE, MAE and MAPE, computed from the same numbers shown on the chart.">
+        Results
+      </button>
+      <button class="gallery-tab"
+        data-src="assets/screenshots/shot_3a_parametric_all.png"
+        data-caption="Every parameter's sensitivity sweep shown at once — the default view when you open the tab.">
+        Parametric &mdash; all
+      </button>
+      <button class="gallery-tab"
+        data-src="assets/screenshots/shot_3b_parametric_single.png"
+        data-caption="Pick a single parameter from the dropdown to inspect its sweep values in detail.">
+        Parametric &mdash; single
+      </button>
+      <button class="gallery-tab"
+        data-src="assets/screenshots/shot_4_export.png"
+        data-caption="Export everything to a single Excel workbook with live, recalculating formulas.">
+        Export
+      </button>
+    </div>
+
+    <div class="gallery-frame">
+      <img id="gallery-image" src="assets/screenshots/shot_1_data.png" alt="GEP Expression Analyzer screenshot" style="transition: opacity 0.15s ease;">
+    </div>
+    <p id="gallery-caption" class="gallery-caption">Load your Excel file and paste the GEP equation. Inputs and the experimental column are detected automatically.</p>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how-it-works" class="section-pad">
+  <div class="container">
+    <div class="section-head">
+      <h2>Five steps, start to finish</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Load your data</h3>
+        <p>Select the Excel file with your experimental dataset.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Paste the equation</h3>
+        <p>Copy the Python function GeneXproTools gave you.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Run the model</h3>
+        <p>One click computes predictions and every statistic.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Explore results</h3>
+        <p>Check the fit chart and the full parametric study.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <h3>Export the report</h3>
+        <p>Get a live-formula Excel workbook to submit or share.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEO TUTORIAL ============ -->
+<section id="tutorial" class="section-pad bg-alt">
+  <div class="container">
+    <div class="section-head center">
+      <h2>Watch it in action</h2>
+      <p class="eyebrow-free-caption" style="margin:0 auto;">A full walkthrough of the tool, from loading data to exporting your report.</p>
+    </div>
+    <div class="video-wrap">
+      <div class="video-frame" id="video-frame">
+        <div class="video-placeholder">
+          <div class="play-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <strong>Tutorial video coming soon</strong>
+          <span>This space is reserved for the walkthrough video — check back shortly.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOWNLOAD ============ -->
+<section id="download" class="section-pad">
+  <div class="container">
+    <div class="download-card">
+      <div>
+        <h2>Get GEP Expression Analyzer</h2>
+        <p>Free for students and researchers. Runs on Windows — install it, point it at your data, and you're validating models in under a minute.</p>
+        <div class="download-ctas">
+          <a href="https://github.com/YOUR-USERNAME/YOUR-REPO/releases/latest" class="btn btn-primary">Download installer (.exe)</a>
+          <a href="https://github.com/YOUR-USERNAME/YOUR-REPO" class="btn btn-outline">View source on GitHub</a>
+        </div>
+      </div>
+      <div class="requirements">
+        <h4>Before you install</h4>
+        <ul>
+          <li>Windows 10 or 11 (64-bit)</li>
+          <li>~150 MB free disk space</li>
+          <li>Your dataset as an .xlsx file</li>
+          <li>Your GEP equation from GeneXproTools</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-note">
+      GEP Expression Analyzer &nbsp;·&nbsp; Eng. Ghassan Ajouri &nbsp;·&nbsp; Supervised by Prof. Yasmine Murad
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/YOUR-USERNAME/YOUR-REPO">GitHub</a>
+      <a href="https://github.com/YOUR-USERNAME/YOUR-REPO/releases/latest">Download</a>
+      <a href="https://github.com/YOUR-USERNAME/YOUR-REPO/issues">Report an issue</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
