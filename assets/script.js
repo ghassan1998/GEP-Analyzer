@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var videoFrame = document.getElementById("video-frame");
   if (YOUTUBE_VIDEO_ID.trim() !== "") {
     videoFrame.innerHTML =
-      '<iframe src="https://www.youtube.com/embed/' + PtV1_waJb1c +
+      '<iframe src="https://www.youtube.com/embed/' + 'PtV1_waJb1c' +
       '" title="GEP Expression Analyzer tutorial" ' +
       'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
       'allowfullscreen></iframe>';
