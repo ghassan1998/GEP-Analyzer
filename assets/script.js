@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
   // To add your tutorial video: paste the YouTube video ID below
   // (the part after "v=" in the YouTube URL) between the quotes.
   // Example: "dQw4w9WgXcQ"
-  var YOUTUBE_VIDEO_ID = ""; // <-- put your video ID here
+  var YOUTUBE_VIDEO_ID = "PtV1_waJb1c"; // <-- put your video ID here
 
   var videoFrame = document.getElementById("video-frame");
   if (YOUTUBE_VIDEO_ID.trim() !== "") {
     videoFrame.innerHTML =
-      '<iframe src="https://www.youtube.com/embed/' + 'PtV1_waJb1c' +
+      '<iframe src="https://www.youtube.com/embed/' + YOUTUBE_VIDEO_ID +
       '" title="GEP Expression Analyzer tutorial" ' +
       'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ' +
       'allowfullscreen></iframe>';
